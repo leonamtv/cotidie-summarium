@@ -1,0 +1,41 @@
+* {
+    border: 1px solid #b8e0c3;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .legend {
+        flex-grow: 1.5;
+    }
+    .summary {
+        display: flex;
+        flex-grow: 8;
+        .participants {
+            flex-grow: 2;
+            
+        }
+        .discussion {
+            flex-grow: 4;
+        }
+
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    .participant-action, .discussion-action {
+        display: flex;
+        button {
+            min-width: 20px;
+            min-height: 20px;
+        }
+        button:hover {
+            filter: brightness(120%);
+            transition: 0.5ms cubic-bezier();
+        }
+    }
+
+}
