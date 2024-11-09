@@ -100,4 +100,18 @@ export class AppComponent implements OnInit {
     }
   }
 
+  public deleteDiscussionItem(discussionItem: DiscussionItem) {
+    this.discussionItems = this.discussionItems
+      .filter(di => {
+        return JSON.stringify(di) != JSON.stringify(discussionItem)
+      })
+  }
+
+  public deleteParticipant(participant: Participant) {
+    this.participants = this.participants
+        .filter(p => {
+          return JSON.stringify(p) != JSON.stringify(participant)
+        })
+  }
+
 }

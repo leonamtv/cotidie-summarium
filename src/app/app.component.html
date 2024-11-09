@@ -9,18 +9,19 @@
   </div>
   <div class="summary">
     <div class="legend">
-      <table>
+      <table [cellSpacing]="0">
         <tr>
           <th>Legend</th>
         </tr>
         <tr *ngFor="let status of allStatuses">
-          <td [style.background-color]="status.backgroundColor"
+          <td class="status"
+              [style.background-color]="status.backgroundColor"
               [style.color]="status.color">{{status.name}}</td>
         </tr>
       </table>
     </div>  
     <div class="participants">
-      <table>
+      <table [cellSpacing]="0">
         <tr>
           <th>nº</th>
           <th>Actions</th>
@@ -35,9 +36,13 @@
               <button *ngFor="let status of participantStatuses" 
                       [style.background-color]="status.backgroundColor"
                       (click)="changeParticipantStatus(participant, status)"></button>
+              <button [style.background-color]="'black'"
+                      [style.color]="'white'"
+                      (click)="deleteParticipant(participant)">-</button>
             </div>
           </td>
-          <td [style.background-color]="participant.status.backgroundColor"
+          <td class="status"
+              [style.background-color]="participant.status.backgroundColor"
               [style.color]="participant.status.color">{{participant.status}}</td>
           <td>{{participant.name}}</td>
           <td>{{participant.attributes}}</td>
@@ -50,7 +55,7 @@
       </table>
     </div>
     <div class="discussion">
-      <table>
+      <table [cellSpacing]="0">
         <tr>
           <th>nº</th>
           <th>Actions</th>
@@ -65,9 +70,13 @@
               <button *ngFor="let status of discussionStatuses" 
                       [style.background-color]="status.backgroundColor"
                       (click)="changeDiscussionItemStatus(discussionItem, status)"></button>
+              <button [style.background-color]="'black'"
+                      [style.color]="'white'"
+                      (click)="deleteDiscussionItem(discussionItem)">-</button>
             </div>
           </td>
-          <td [style.background-color]="discussionItem.status.backgroundColor"
+          <td class="status"
+              [style.background-color]="discussionItem.status.backgroundColor"
               [style.color]="discussionItem.status.color">{{discussionItem.status}}</td>
           <td>{{discussionItem.caller}}</td>
           <td>{{discussionItem.description}}</td>
