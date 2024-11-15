@@ -1,0 +1,50 @@
+.time-control {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    .watch {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+            padding-right: 1px;
+            padding-left: 1px;
+        }
+        .digit {
+            color:#ff5b5b;
+            font-weight: 600;
+        }
+        .unit-indicator {
+            color:#99ff6d;
+        }
+    }
+    .actions {
+        button {
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding-left: 4px;
+            padding-right: 4px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            margin-right: 5px;
+        }
+        button:hover {
+            filter: brightness(120%);
+            transition: 0.5ms cubic-bezier();
+        }
+        .start {
+            background-color: #0ec244;
+        }
+        .stop {
+            background-color: #fc4949;
+        }
+    }
+}

@@ -1,11 +1,23 @@
-* {
-    border: 1px solid #b8e0c3;
-}
-table tr td, input, select {
+
+table tr td, table tr th, input, select {
     padding-left: 4px;
     padding-right: 4px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid white;
+}
+
+h1, p {
+    color: blue;
+}
+
+p {
+    font-style: italic;
+}
+
+table tr th, .table-footer td {
+    background-color: blue;
+    color: white;
 }
 .status {
     min-width: 100px;
@@ -14,23 +26,26 @@ table tr td, input, select {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    
     .header{
         text-align: center;
+        padding: 2% 0%;
     }
     .legend {
-        flex-grow: 1.5;
+        flex-grow: 1;
     }
     .summary {
         display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
         flex-grow: 8;
         .participants {
             flex-grow: 2;
-            
         }
         .discussion {
-            flex-grow: 4;
+            flex-grow: 5;
         }
-
     }
     .footer {
         position: absolute;
@@ -40,6 +55,7 @@ table tr td, input, select {
     .participant-action, .discussion-action {
         display: flex;
         button {
+            border: none;
             min-width: 20px;
             min-height: 20px;
         }
