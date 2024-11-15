@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -112,6 +112,10 @@ export class AppComponent implements OnInit {
         .filter(p => {
           return JSON.stringify(p) != JSON.stringify(participant)
         })
+  }
+
+  public getBackgroundColor(index: number) : string {
+    return ( index % 2 ) ? 'rgb(209, 227, 255)' : 'white';
   }
 
 }

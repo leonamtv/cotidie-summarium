@@ -1,10 +1,14 @@
 <main class="main">
   <div class="header">
     <div class="header-title">
-      <h1>Cotidie Summarium</h1>
+      <h1>
+        Cotidie Summarium
+      </h1>
     </div>
     <div class="header-sentence">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      <p>
+        This application offers a tool to control daily standups/checkpoints for remote teams. 
+      </p>
     </div>
   </div>
   <div class="summary">
@@ -30,8 +34,8 @@
           <th>Attributes</th>
         </tr>
         <tr *ngFor="let participant of participants; index as i">
-          <td>{{i + 1}}</td>
-          <td>
+          <td [style.background-color]="getBackgroundColor(i)">{{i + 1}}</td>
+          <td [style.background-color]="getBackgroundColor(i)">
             <div class="participant-action">
               <button *ngFor="let status of participantStatuses" 
                       [style.background-color]="status.backgroundColor"
@@ -44,10 +48,10 @@
           <td class="status"
               [style.background-color]="participant.status.backgroundColor"
               [style.color]="participant.status.color">{{participant.status}}</td>
-          <td>{{participant.name}}</td>
-          <td>{{participant.attributes}}</td>
+          <td [style.background-color]="getBackgroundColor(i)">{{participant.name}}</td>
+          <td [style.background-color]="getBackgroundColor(i)">{{participant.attributes}}</td>
         </tr>
-        <tr>
+        <tr class="table-footer">
           <td colspan="2"></td>
           <td>Add participant: </td>
           <td><input type="text" (keyup.enter)="addParticipant($event)" /></td>
@@ -65,8 +69,8 @@
           <th>Description</th>
         </tr>
         <tr *ngFor="let discussionItem of discussionItems; index as i">
-          <td>{{i + 1}}</td>
-          <td>
+          <td [style.background-color]="getBackgroundColor(i)">{{i + 1}}</td>
+          <td [style.background-color]="getBackgroundColor(i)">
             <div class="discussion-action">
               <button *ngFor="let status of discussionStatuses" 
                       [style.background-color]="status.backgroundColor"
@@ -79,10 +83,10 @@
           <td class="status"
               [style.background-color]="discussionItem.status.backgroundColor"
               [style.color]="discussionItem.status.color">{{discussionItem.status}}</td>
-          <td>{{discussionItem.caller}}</td>
-          <td>{{discussionItem.description}}</td>
+          <td [style.background-color]="getBackgroundColor(i)">{{discussionItem.caller}}</td>
+          <td [style.background-color]="getBackgroundColor(i)">{{discussionItem.description}}</td>
         </tr>
-        <tr>
+        <tr class="table-footer">
           <td colspan="2"></td>
           <td>Add discussion: </td>
           <td>
@@ -99,8 +103,7 @@
       </table>
     </div>
   </div>
-  
 </main>
 <div class="footer">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  
 </div>
