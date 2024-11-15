@@ -32,19 +32,20 @@ table tr th, .table-footer td {
         padding: 2% 0%;
     }
     .legend {
-        flex-grow: 1.5;
+        flex-grow: 1;
     }
     .summary {
         display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
         flex-grow: 8;
         .participants {
             flex-grow: 2;
-            
         }
         .discussion {
-            flex-grow: 4;
+            flex-grow: 5;
         }
-
     }
     .footer {
         position: absolute;

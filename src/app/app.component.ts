@@ -7,11 +7,12 @@ import { Status } from './status';
 import { StatusService } from './status.service';
 import { DiscussionItem } from './discussion-item';
 import { FormsModule } from '@angular/forms';
+import { TimeControlComponent } from "./time-control/time-control.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TimeControlComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

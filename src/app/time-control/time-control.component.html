@@ -1,0 +1,17 @@
+<div class="time-control">
+    <div class="watch">
+        <p class="digit">{{hour_digit_1}}</p>
+        <p class="digit">{{hour_digit_0}}</p>
+        <p class="unit-indicator">h</p>
+        <p class="digit">{{minute_digit_1}}</p>
+        <p class="digit">{{minute_digit_0}}</p>
+        <p class="unit-indicator">m</p>
+        <p class="digit">{{second_digit_1}}</p>
+        <p class="digit">{{second_digit_0}}</p>
+        <p class="unit-indicator">s</p>
+    </div>
+    <div class="actions">
+        <button class="start" (click)="startCounting()">Start</button>
+        <button class="stop" (click)="stopCount()">Stop and Reset</button>
+    </div>
+</div>
